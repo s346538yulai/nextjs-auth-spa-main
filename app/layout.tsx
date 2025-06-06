@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body>
-        <Navbar /> {/* 导航栏Navbar */}
+        <Navbar /> {/*Navbar */}
         <main>{children}</main>
       </body>
     </html>

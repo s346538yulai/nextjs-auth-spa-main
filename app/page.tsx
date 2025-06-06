@@ -57,7 +57,7 @@ export default function Home() {
 
   return (
     <main className="p-4 max-w-xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">🌐 欢迎来到动态广场</h1>
+      <h1 className="text-2xl font-bold mb-4">🌐 Welcome to the Live Zone</h1>
 
       {isLoggedIn ? (
         <div className="mb-6">
@@ -96,16 +96,16 @@ export default function Home() {
             className="bg-blue-600 text-white px-11 py-2 rounded hover:bg-blue-700"
             disabled={!content.trim()}
           >
-            发布
+            Post
           </button>
         </div>
       ) : (  //If else 三元表达式
-        <p className="text-red-600 mb-4">⚠️ 请先登录才能发布内容。</p>
+        <p className="text-red-600 mb-4">⚠️ Pleae login first</p>
       )}
 
       <div className="space-y-4">
         {posts.length === 0 ? (
-          <p className="text-gray-500">暂无动态。</p>
+          <p className="text-gray-500">No recent activity</p>
         ) : (
           posts.map((post, index) => {
             const loginStatus = localStorage.getItem("isLoggedIn") === "true";
@@ -129,7 +129,7 @@ export default function Home() {
                       onClick={() => handleDelete(index)}
                       className="text-red-600 hover:underline"
                     >
-                      删除
+                      Delete
                     </button>
                   </div>
                 )}
