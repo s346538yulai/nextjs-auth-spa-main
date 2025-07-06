@@ -29,21 +29,20 @@ export default function Navbar() {
       <div className="font-bold text-lg">Social Awareness Website</div>
       <div className="flex items-center gap-4">
         <Link href="/">Homepage</Link>
+        <Link href="/home">My page</Link>
+        <Link href="/notification">Notification</Link>
+        <Link href="/profile">Profile</Link>
+        <Link href="/aboutus">About Us</Link>
+        {isLoggedIn && userEmail && (
+          <span className="text-sm text-gray-300">{userEmail}</span>
+        )}
         {isLoggedIn ? (
-          <>
-            <Link href="/home">My page</Link>
-            <Link href="/notification">Notification</Link>
-            <Link href="/profile">Profile</Link>
-            {userEmail && (
-              <span className="text-sm text-gray-300">{userEmail}</span>
-            )}
-            <button
-              onClick={handleLogout}
-              className="text-red-300 hover:text-red-500"
-            >
-              Logout
-            </button>
-          </>
+          <button
+            onClick={handleLogout}
+            className="text-red-300 hover:text-red-500"
+          >
+            Logout
+          </button>
         ) : (
           <>
             <Link href="/login">Login</Link>

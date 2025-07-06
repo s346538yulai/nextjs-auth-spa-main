@@ -52,7 +52,7 @@ export default function LoginPage() {
         {/* Email input */}
         <input
           type="email"
-          placeholder="Emter your Email"
+          placeholder="Enter your Email"
           {...register('email', { required: 'You cannot leave empty field here!' })}
           className="p-2 border rounded"
         />
