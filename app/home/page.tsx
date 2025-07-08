@@ -35,59 +35,7 @@ export default function HomePage() {
           <button className="bg-black text-white rounded px-4 py-1">View More</button>
         </div>
 
-        {/* Post Cards */}
-        {[
-          {
-            name: 'Jane Doe',
-            time: '2h ago',
-            location: 'London',
-            imageAlt: 'Jane enjoying a sunset.',
-            text: 'What a beautiful day!',
-            tags: ['Sunset', 'Nature'],
-          },
-          {
-            name: 'John Smith',
-            time: '3h ago',
-            location: 'New York',
-            imageAlt: 'John at the coffee shop.',
-            text: 'Started my day with a great coffee!',
-            tags: ['Coffee', 'Morning'],
-          },
-          {
-            name: 'Emily Jones',
-            time: '1d ago',
-            location: 'Sydney',
-            imageAlt: 'Emily at the beach.',
-            text: 'Beach day is the best day!',
-            tags: ['Beach', 'Relaxation'],
-          },
-        ].map((post, idx) => (
-          <article key={idx} className="bg-white rounded-lg shadow">
-            <header className="flex items-center justify-between px-4 py-2">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gray-300 rounded-full" />
-                <div>
-                  <p className="font-semibold text-gray-800">{post.name}</p>
-                  <p className="text-xs text-gray-500">{post.time} • {post.location}</p>
-                </div>
-              </div>
-              <button className="text-gray-500 hover:text-gray-700">⋯</button>
-            </header>
-            <div className="w-full h-64 bg-gray-200 flex items-center justify-center text-gray-500">
-              {post.imageAlt}
-            </div>
-            <div className="px-4 py-3">
-              <p className="text-gray-800 mb-2">{post.text}</p>
-              <div className="flex space-x-2 text-xs">
-                {post.tags.map((tag) => (
-                  <span key={tag} className="bg-gray-100 px-2 py-1 rounded-full text-gray-500">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </article>
-        ))}
+     
       </main>
 
       {/* Footer Links */}

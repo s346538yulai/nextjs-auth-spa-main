@@ -30,8 +30,6 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         <Link href="/">Homepage</Link>
         <Link href="/home">My page</Link>
-        <Link href="/notification">Notification</Link>
-        <Link href="/profile">Profile</Link>
         <Link href="/aboutus">About Us</Link>
         {isLoggedIn && userEmail && (
           <span className="text-sm text-gray-300">{userEmail}</span>
